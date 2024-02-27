@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+<!-- - favicon-->
+<link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+<!--- google font link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- bootstrap css -->
+<link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+<!-- custom css -->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<!-- fontawesome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<style>
+    footer {
+        background-color: hsl(152, 51%, 52%);
+        color: hsl(120, 60%, 92%);
+
+        h5 {
+            color: hsl(150, 18%, 9%);
+        }
+    }
+    footer a {
+        color: #e1e1e1;
+    }
+
+        <style>
+.navbar-brand img {
+    width: 30px;
+}
+
+.navbar-brand span {
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+}
+
+.nav-link:hover {
+    color: var(--pink) !important;
+}
+
+.nav-item {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+            .cart-wrap {
+	padding: 40px 0;
+	font-family: 'Open Sans', sans-serif;
+}
+.main-heading {
+	font-size: 19px;
+	margin-bottom: 20px;
+}
+.table-wishlist table {
+    width: 100%;
+}
+.table-wishlist thead {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 5px;
+}
+.table-wishlist thead tr th {
+    padding: 8px 0 18px;
+    color: #484848;
+    font-size: 15px;
+    font-weight: 400;
+}
+.table-wishlist tr td {
+    padding: 25px 0;
+    vertical-align: middle;
+}
+.table-wishlist tr td .img-product {
+    width: 72px;
+    float: left;
+    margin-left: 8px;
+    margin-right: 31px;
+    line-height: 63px;
+}
+.table-wishlist tr td .img-product img {
+	width: 100%;
+}
+.table-wishlist tr td .name-product {
+    font-size: 15px;
+    color: #484848;
+    padding-top: 8px;
+    line-height: 24px;
+    width: 50%;
+}
+.table-wishlist tr td.price {
+    font-weight: 600;
+}
+.table-wishlist tr td .quanlity {
+    position: relative;
+}
+
+.total {
+	font-size: 24px;
+	font-weight: 600;
+	color: #8660e9;
+}
+.display-flex {
+	display: flex;
+}
+.align-center {
+	align-items: center;
+}
+.round-black-btn {
+	border-radius: 25px;
+    background: #212529;
+    color: #fff;
+    padding: 5px 20px;
+    display: inline-block;
+    border: solid 2px #212529; 
+    transition: all 0.5s ease-in-out 0s;
+    cursor: pointer;
+    font-size: 14px;
+}
+.round-black-btn:hover,
+.round-black-btn:focus {
+	background: transparent;
+	color: #212529;
+	text-decoration: none;
+}
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+.mt-30 {
+    margin-top: 30px !important;
+}
+.d-block {
+    display: block;
+}
+.custom-form label {
+    font-size: 14px;
+    line-height: 14px;
+}
+.pretty.p-default {
+    margin-bottom: 15px;
+}
+.pretty input:checked~.state.p-primary-o label:before, 
+.pretty.p-toggle .state.p-primary-o label:before {
+    border-color: #8660e9;
+}
+.pretty.p-default:not(.p-fill) input:checked~.state.p-primary-o label:after {
+    background-color: #8660e9 !important;
+}
+.main-heading.border-b {
+    border-bottom: solid 1px #ededed;
+    padding-bottom: 15px;
+    margin-bottom: 20px !important;
+}
+.custom-form .pretty .state label {
+    padding-left: 6px;
+}
+.custom-form .pretty .state label:before {
+    top: 1px;
+}
+.custom-form .pretty .state label:after {
+    top: 1px;
+}
+.custom-form .form-control {
+    font-size: 14px;
+    height: 38px;
+}
+.custom-form .form-control:focus {
+    box-shadow: none;
+}
+.custom-form textarea.form-control {
+    height: auto;
+}
+.mt-40 {
+    margin-top: 40px !important; 
+}
+.in-stock-box {
+	background: #008e34;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 25px;
+	padding: 4px 15px;
+	display: inline-block;  
+    color: #fff;
+}
+.trash-icon {
+    font-size: 20px;
+    color: #212529;
+}
+a{
+    color: #212529;
+}
+a:hover
+{
+    color: rgb(21, 140, 19);;
+}
+   </style>
+</head>
+    </head>
+    
+    <body>
+     
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex  ms-4 justify-content-between align-items-center order-lg-0"
+                    href="/index.html">
+                    <img src="../assets/images/home pg/shopping-bag-icon.png" alt="site icon">
+                    <span class="text-uppercase fw-lighter fw-bold" style="color:green;">TRNDZZ</span>
+                </a>
+                <div class="d-none d-lg-block order-lg-2 nav-btns">
+                    <button type="button" class="btn position-relative">
+                        <a href="cart.html" style="width: 10px;height:10px;"><i class="fa fa-shopping-cart"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span></a>
+                    </button>
+                    <button type="button" class="btn position-relative">
+                        <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                    </button>
+                    <button type="button" class="btn position-relative">
+                        <a href="profile.html"><i class="fa fa-user"></i></a>
+                    </button>
+                </div>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+                    <ul class="navbar-nav mx-auto text-center">
+                        <li class="nav-item px-2 py-2 border-0">
+                            <a class="nav-link text-uppercase text-dark" href="/index.html">home</a>
+                        </li>
+                        <li class="nav-item px-2 py-2 border-0">
+                            <a class="nav-link text-uppercase text-dark" href="/index.html">popular</a>
+                        </li>
+                        <li class="nav-item px-2 py-2 border-0">
+                            <a class="nav-link text-uppercase text-dark" href="/index.html">Collection</a>
+                        </li>
+                        <li class="nav-item px-2 py-2 border-0">
+                            <a class="nav-link text-uppercase text-dark" href="/index.html">Mens</a>
+                        </li>
+                        <li class="nav-item px-2 py-2 border-0">
+                            <a class="nav-link text-uppercase text-dark" href="/index.html">Womens</a>
+                        </li>
+                        <li class="nav-item px-2 py-2 border-0">
+                            <a class="nav-link text-uppercase text-dark" href="/index.html">Kids</a>
+                        </li>
+                        <li class="nav-item px-2 py-2 border-0">
+                            <a class="nav-link text-uppercase text-dark" href="/index.html">BLOGS</a>
+                        </li>
+                        <li class="nav-item px-2 py-2 border-0">
+                            <a class="nav-link text-uppercase text-dark" href="/index.html">ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+    
+            </div>
+            <form class="form-inline me-4 d-none d-md-block">
+                <!-- <form class="form-inline me-2 me-md-4"> -->
+                <input class="form-control mr-sm-2 search-responsive" type="search" placeholder="Search"
+                    aria-label="Search">
+            </form>
+        </nav>
+    <div class="cart-wrap" style="margin-top: 100px;">
+        <div class="container mb-8 " >
+           <div class="row">
+                    <div class="col-md-12">
+                    <div class="main-heading mb-6 pt-6">My wishlist</div>
+                    <div class="table-wishlist">
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle">
+                                <thead>
+                                <tr class="text-center">
+                                        <th>Product Name</th>
+                                        <th>Unit Price</th>
+                                        <th>Stock Status</th>
+                                        <th>Add to cart</th>
+                                        <th>Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td >
+                                            <div class="display-flex flex-column align-items-center">
+                                                <div class="img-product">
+                                                    <img src="../assets/images/images/gold earring.webp">
+                                                </div>
+                                                <div class="name-product">
+                                                    Gold Earing
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td  class="text-center price px-2">$110.00</td>
+                                        <td class="text-center px-4" ><span class="in-stock-box">In Stock</span></td>
+                                    <td class="text-center px-4">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <button class="round-black-btn d-none d-lg-block small-btn">Add to Cart</button>
+                                            <i class="fa fa-shopping-cart d-block d-lg-none ml-2"></i>
+                                        </div>
+                                    </td>
+                                        <td  class="px-4  text-center text-center"><a href="#" class="trash-icon"><i
+                                                    class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="display-flex flex-column align-items-center">
+                                                <div class="img-product">
+                                                    <img src="../assets/images/images/gold earring.webp">
+                                                </div>
+                                                <div class="name-product">
+                                                    Gold Earing
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center price px-2">$110.00</td>
+                                        <td class="text-center px-4"><span class="in-stock-box">In Stock</span></td>
+                                        <td class="text-center px-4">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <button class="round-black-btn d-none d-lg-block small-btn">Add to Cart</button>
+                                                <i class="fa fa-shopping-cart d-block d-lg-none ml-2"></i>
+                                            </div>
+                                        </td>
+                                        <td class="px-4  text-center text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="display-flex flex-column align-items-center">
+                                                <div class="img-product">
+                                                    <img src="../assets/images/images/gold earring.webp">
+                                                </div>
+                                                <div class="name-product">
+                                                    Gold Earing
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center price px-2">$110.00</td>
+                                        <td class="text-center px-4"><span class="in-stock-box">In Stock</span></td>
+                                        <td class="text-center px-4">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <button class="round-black-btn d-none d-lg-block small-btn">Add to Cart</button>
+                                                <i class="fa fa-shopping-cart d-block d-lg-none ml-2"></i>
+                                            </div>
+                                        </td>
+                                        <td class="px-4  text-center text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center">
+        <div class="container p-4">
+            <section class="mb-4">
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <section class="">
+                <form action="">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="email" id="form5Example24" class="form-control" />
+                                <label class="form-label" for="form5Example24">Email address</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
+                    harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </section>
+            <section class="">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">POPULAR CATEGORIES</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body" href="#!">Fashion</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Electronics</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Cosmetics</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Health</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">PRODUCTS</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body" href="#!">Prices Drop</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">New Products</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Best Sales</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">OUR COMPANY</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body" href="#!">Delivery</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Legal Notice</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Terms And Conditions</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">SERVICES</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body" href="#!">Prices Drop</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">New Products</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Best Sales</a>
+                            </li>
+                            <li>
+                                <a class="text-body" href="#!">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">TRNDZZ</a>
+        </div>
+    </footer>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src="../assets/js/script.js"></script>
+    <!--     - custom js link-->
+    <script src="./assets/js/script.js"></script>
+    <!-- - ionicon link-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

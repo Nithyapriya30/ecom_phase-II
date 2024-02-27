@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f2f2f2;
+    }
+
+        /* Custom styles for table and animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        @media (max-width: 767px) {
+
+            th,
+            td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            th {
+                text-align: left;
+            }
+        }
+a{
+  text-decoration: none;
+}
+.dropdown-item{
+  text-decoration: none;
+}
+.dropdown-item:hover
+{
+  background-color: #e4e9f7;
+}
+</style>
+<script>
+    function showAlert() {
+        alert("Item added successfully!"); // You can customize the alert message here
+    }
+</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white"
+        style=" border-bottom: 1px solid rgba(187, 187, 187, 0.64); background-color: white; z-index: 999">
+        <div class=" d-flex ">
+            <a class="navbar-brand d-flex  ms-4 justify-content-between align-items-center order-lg-0"
+                href="index.html">
+                <img class="img-fluid" src="../assets/images/home pg/shopping-bag-icon.png" alt="site icon"
+                    width="30px;">
+                <span class="text-uppercase fw-lighter fw-bold">TRNDZZ</span>
+            </a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  " id="navMenu">
+                <ul class="navbar-nav my-sm-0 ">
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="#header">home</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="#collection">Collection</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 dropdown">
+                        <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <ul class="dropdown-menu">
+                            <a href="./add.html">
+                                <li><button class="dropdown-item" type="button">Add a Product</button></li>
+                            </a>
+                            <a href="./seldash.html">
+                                <li><button class="dropdown-item" type="button">Dashboard</button></li>
+                            </a>
+                            <a href="./ordmgt.html">
+                                <li><button class="dropdown-item" type="button">Order Management</button></li>
+                            </a>
+                            <a href="./pdtmgt.html">
+                                <li><button class="dropdown-item" type="button">Product Management</button></li>
+                            </a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br>
+
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <table class="table animate-fadeIn">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Company Name</th>
+                    <th>Product Name</th>
+                    <th>Product Image</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th>Add Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example table rows -->
+                <tr>
+                    <td>1</td>
+                    <td>Company A</td>
+                    <td>Product X</td>
+                    <td><img src="https://imagescdn.thecollective.in/img/app/product/9/924200-11644046.jpg"
+                            style="width: 50px;height: 50px;" alt="Product Image"></td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                    <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Company B</td>
+                    <td>Product Y</td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYi9qhS-e3yoR-wwxcY-Y-zBEObu-71CRKAg&usqp=CAU"
+                            style="width: 50px;height: 50px;" alt="Product Image"></td>
+                    <td>1</td>
+                    <td>$30.00</td>
+                     <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Company A</td>
+                    <td>Product X</td>
+                    <td><img src="https://image.harrods.com/gucci-gg-jacquard-jacket_21029730_46944688_2048.jpg"
+                            style="width: 50px;height: 50px;" alt="Product Image"></td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                     <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Company A</td>
+                    <td>Product X</td>
+                    <td><img src="https://img3.exportersindia.com/product_images/bc-full/2021/2/6716359/1614162421_p_5734032_1264206.jpeg"
+                            style="width: 50px;height: 50px;" alt="Product Image"></td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                     <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Company A</td>
+                    <td>Product X</td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBavOK7TFvjwWJBSyVb4LmSgOXrwaSFHz96Q&usqp=CAU"
+                            style="width: 50px;height: 50px; " alt="Product Image"></td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                     <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Company A</td>
+                    <td>Product X</td>
+                    <td><img src="https://www.lafuma.com/visuels/original/LFV12462_5439_C3E_0.png?auto=webp&format=pjpg&bg-color=f3f3f3&width=750&height=937.5&fit=cover"
+                            style="width: 50px;height: 50px;" alt="Product Image"></td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                     <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Company A</td>
+                    <td>Product X</td>
+                    <td><img src="https://cdn.shopify.com/s/files/1/0487/5947/2277/products/1_96a99fcf-6e36-4c52-8222-3bbd2628e7cd_800x.jpg"
+                            style="width: 50px;height: 50px;" alt="Product Image"></td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                     <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Company A</td>
+                    <td>Product X</td>
+                    <td><img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-embroidered-signature-wool-pont-neuf-jacket--HOJ41WUJ2900_PM2_Front%20view.jpg"
+                            style="width: 50px;height: 50px;" alt="Product Image"></td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                     <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Company A</td>
+                    <td>Product X</td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR19E7wEWuWXcFLXnkpeC5TDIB4KI83zlgz8HqNVtgjCf8v4iDFAw-rxYKhKeiS4n12Y4Q&usqp=CAU"
+                            style="width: 50px;height: 50px;" alt="Product Image"></td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                     <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Company A</td>
+                    <td>Product X</td>
+                    <td><img src="https://assets.orvis.com/is/image/orvisprd/8978SL2W-1?wid=400&src=is($object$:1-1)"
+                            style="width: 50px;height: 50px;" alt="Product Image"></td>
+                    <td>2</td>
+                    <td>$50.00</td>
+                     <td><button class="btn btn-primary" onclick="showAlert()">Add</button></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-auto">
+                    <button type="button" class="btn btn-primary">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

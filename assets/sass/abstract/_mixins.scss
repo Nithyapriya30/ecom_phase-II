@@ -1,0 +1,21 @@
+@mixin heading()
+{
+    color:blue;
+    text-align:center;
+    font-size: 3rem;
+    padding-top: 5rem;
+    margin: 2rem 0;
+    position: relative;
+
+    &::after
+    {
+        content: '';
+        position: absolute;
+        bottom:-1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        height: .3rem;
+        width: 60%;
+        background: red;
+    }
+}

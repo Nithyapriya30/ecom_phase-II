@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in page</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha384-..."
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <style>
+            a{
+                color:black;
+            }
+        </style>
+</head>
+<nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand d-flex  ms-4 justify-content-between align-items-center order-lg-0" href="/index.html">
+            <img src="../assets/images/home pg/shopping-bag-icon.png" alt="site icon">
+            <span class="text-uppercase fw-lighter fw-bold" style="color:green;">TRNDZZ</span>
+        </a>
+        <div class="d-none d-lg-block order-lg-2 nav-btns">
+            <button type="button" class="btn position-relative">
+                <a href="cart.html" style="width: 10px;height:10px;"><i class="fa fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-success">5</span></a>
+            </button>
+            <button type="button" class="btn position-relative">
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                <span class="position-absolute top-0 start-100 translate-middle badge bg-success">2</span>
+            </button>
+            <button type="button" class="btn position-relative">
+                <a href="profile.html"><i class="fa fa-user"></i></a>
+            </button>
+        </div>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item px-2 py-2 border-0">
+                    <a class="nav-link text-uppercase text-dark" href="/index.html">home</a>
+                </li>
+                <li class="nav-item px-2 py-2 border-0">
+                    <a class="nav-link text-uppercase text-dark" href="/index.html">popular</a>
+                </li>
+                <li class="nav-item px-2 py-2 border-0">
+                    <a class="nav-link text-uppercase text-dark" href="/index.html">Collection</a>
+                </li>
+                <li class="nav-item px-2 py-2 border-0">
+                    <a class="nav-link text-uppercase text-dark" href="/index.html">Mens</a>
+                </li>
+                <li class="nav-item px-2 py-2 border-0">
+                    <a class="nav-link text-uppercase text-dark" href="/index.html">Womens</a>
+                </li>
+                <li class="nav-item px-2 py-2 border-0">
+                    <a class="nav-link text-uppercase text-dark" href="/index.html">Kids</a>
+                </li>
+                <li class="nav-item px-2 py-2 border-0">
+                    <a class="nav-link text-uppercase text-dark" href="/index.html">BLOGS</a>
+                </li>
+                <li class="nav-item px-2 py-2 border-0">
+                    <a class="nav-link text-uppercase text-dark" href="/index.html">ABOUT</a>
+                </li>
+            </ul>
+        </div>
+        <br>
+
+    </div>
+    <form class="form-inline me-4 d-none d-md-block">
+        <!-- <form class="form-inline me-2 me-md-4"> -->
+        <input class="form-control mr-sm-2 search-responsive" type="search" placeholder="Search" aria-label="Search">
+    </form>
+</nav>
+<body class="login mt-5"style="margin-top:100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container w-75 shadow" style="max-width: 390px;margin-top:100px;">
+                    <form id="login-form" class="p-3" onsubmit="return handleSubmit();">
+                        <h2 class="mb-4 text-center fw-bold">Login</h2>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email&nbsp;<span class="star">*</span></label>
+                            <input type="text" id="email" name="email" class="form-control">
+                            <div class="error-message" style="color: red;"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password&nbsp;<span class="star">*</span></label>
+                            <input type="password" id="password" name="password" class="form-control">
+                            <div class="error-message" style="color: red;"></div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-4">
+                            <button type="button" class="btn btn-primary log-btn" onclick="handleSubmit()">Log In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-between align-items-center">
+                <img src="../assets/images/home pg/blog_1.jpg" alt="" class="img-fluid" width="400px">
+            </div>
+        </div>
+    </div>
+   <script>
+    function init() {
+        var emailInput = document.getElementById('email');
+        var passwordInput = document.getElementById('password');
+
+        document.getElementById('email').addEventListener('input', function () {
+            hideError(emailInput);
+        });
+
+        document.getElementById('password').addEventListener('input', function () {
+            hideError(passwordInput);
+        });
+    }
+
+    function handleSubmit() {
+        var emailValid = validateEmail();
+        var passwordValid = validatePassword();
+
+        if (!emailValid || !passwordValid) {
+            return false;
+        } else {
+            var userEmail = document.getElementById('email').value.trim();
+            var userPassword = document.getElementById('password').value.trim();
+
+            if (userEmail === 'cust@gmail.com' && userPassword === 'Cust@123') {
+                window.location.href = "../index.html";
+            } else if (userEmail === 'seller@gmail.com' && userPassword === 'Seller@123') {
+                window.location.href = '../seller/ordmgt.html';
+            } else if (userEmail === 'admin@gmail.com' && userPassword === 'Admin@123') {
+                window.location.href = '../admin/dashboard.html';
+            } else {
+                alert('Try with this for user email: cust@gmail.com and pwd: Cust@123, for seller email: seller@gmail.com and pwd: Seller@123, and for admin email: admin@gmail.com and pwd: Admin@123');
+                return false;
+            }
+        }
+    }
+
+    function displayError(inputElement, message) {
+        var errorDiv = inputElement.nextElementSibling;
+        if (!errorDiv || !errorDiv.classList.contains('error-message')) {
+            errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            inputElement.parentNode.appendChild(errorDiv);
+        }
+        errorDiv.textContent = message;
+    }
+
+    function hideError(inputElement) {
+        var errorDiv = inputElement.nextElementSibling;
+        if (errorDiv && errorDiv.classList.contains('error-message')) {
+            errorDiv.textContent = '';
+        }
+    }
+
+    function validateEmail() {
+            var emailInput = document.getElementById('email');
+            var email = emailInput.value.trim();
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailRegex.test(email)) {
+                hideError(emailInput);
+                return true;
+            } else {
+                displayError(emailInput, 'Invalid email address.');
+                return false;
+            }
+        }
+
+        function validatePassword() {
+            var passwordInput = document.getElementById('password');
+            var password = passwordInput.value.trim();
+            var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+
+            if (passwordRegex.test(password)) {
+                hideError(passwordInput);
+                return true;
+            } else {
+                displayError(passwordInput, 'Password must be 8 characters with at least one alphabet, one number, and one special character.');
+                return false;
+            }
+        }
+        init();
+</script>
+</body>
+</html>

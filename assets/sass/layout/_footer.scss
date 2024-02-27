@@ -1,0 +1,17 @@
+footer {
+    background-color: hsl(152, 51%, 52%);
+    color: hsl(120, 60%, 92%);
+
+    h5 {
+        color: hsl(150, 18%, 9%);
+    }
+
+    // Anchor styles
+    a {
+        color: #e1e1e1;
+
+        &:hover {
+            color: rgb(251, 44, 25);
+        }
+    }
+}

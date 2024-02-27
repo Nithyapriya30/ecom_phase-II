@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>categories</title>
+    <!--  - favicon  -->
+    <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+            /* Category Start */
+.category-card{
+    border: 1px solid #ddd;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    margin-bottom: 24px;
+    background-color: #fff;
+}
+.category-card a{
+    text-decoration: none;
+}
+.category-card .category-card-img{
+    max-height: 260px;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.category-card .category-card-body{
+    padding: 10px 16px;
+}
+.category-card .category-card-body h5{
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+/* Category End */
+a{
+    color:#000;
+    text-decoration: none;
+}
+a:hover{
+    color:hsl(152, 44%, 45%);
+}
+.badge bg-primary
+{
+    color:hsl(152, 44%, 45%);
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex  ms-4 justify-content-between align-items-center order-lg-0" href="/index.html">
+                <img src="../assets/images/home pg/shopping-bag-icon.png" alt="site icon">
+                <span class="text-uppercase fw-lighter fw-bold" style="color:green;">TRNDZZ</span>
+            </a>
+            <div class="d-none d-lg-block order-lg-2 nav-btns">
+                <button type="button" class="btn position-relative">
+                    <a href="cart.html" style="width: 10px;height:10px;"><i class="fa fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge bg-success">5</span></a>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-success">2</span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <a href="profile.html"><i class="fa fa-user"></i></a>
+                </button>
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="/index.html">home</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="/index.html">popular</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="/index.html">Collection</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="/index.html">Mens</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="/index.html">Womens</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="/index.html">Kids</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="/index.html">BLOGS</a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="/index.html">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+    
+        </div>
+        <form class="form-inline me-4 d-none d-md-block">
+            <input class="form-control mr-sm-2 search-responsive" type="search" placeholder="Search" aria-label="Search">
+        </form>
+    </nav>
+        <div class="py-3 py-md-5 mt-8 bg-light">
+            <div class="mt-5 justify-content-center"style="text-align:center;">
+                <h3>
+                    Categories
+                </h3>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-6 col-md-3 mt-5">
+                       
+                        <div class="category-card">
+                            <a href="./categorylist.html">
+                                <div class="category-card-img">
+                                    <img src="../assets/images/home pg/c_pant_girl.png" class="w-100" alt="Laptop">
+                                </div>
+                                <div class="category-card-body">
+                                    <h5>Jean</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mt-5">
+                        <div class="category-card">
+                            <a href="./categorylist.html">
+                                <div class="category-card-img">
+                                    <img src="../assets/images/home pg/c_western-shirt.png" class="w-100" alt="Mobile Devices">
+                                </div>
+                                <div class="category-card-body">
+                                    <h5>Western wear</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mt-5">
+                        <div class="category-card">
+                            <a href="./categorylist.html">
+                                <div class="category-card-img">
+                                    <img src="../assets/images/home pg/c_tunic-shirt_girl.png" class="w-100" alt="Mens Fashion">
+                                </div>
+                                <div class="category-card-body">
+                                    <h5>Tunic shirts</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mt-5">
+                        <div class="category-card">
+                            <a href="./categorylist.html">
+                                <div class="category-card-img">
+                                    <img src="../assets/images/home pg/c_undershirt.png" class="w-100" alt="Women Fashion">
+                                </div>
+                                <div class="category-card-body">
+                                    <h5>Undershirts</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="py-3 py-md-5 mt-8 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="category-card">
+                        <a href="./categorylist.html">
+                            <div class="category-card-img">
+                                <img src="../assets/images/home pg/c_polo-shirt.png" class="w-100" alt="Laptop">
+                            </div>
+                            <div class="category-card-body">
+                                <h5>Polo Shirt</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="category-card">
+                        <a href="./categorylist.html">
+                            <div class="category-card-img">
+                                <img src="../assets/images/home pg/c_t-shirt_men.png" class="w-100" alt="Mobile Devices">
+                            </div>
+                            <div class="category-card-body">
+                                <h5>Shirt-Sleeve</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="category-card">
+                        <a href="./categorylist.html">
+                            <div class="category-card-img">
+                                <img src="../assets/images/home pg/c_shirt-girl.png" class="w-100" alt="Mens Fashion">
+                            </div>
+                            <div class="category-card-body">
+                                <h5>Shirt-half sleeve</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="category-card">
+                        <a href="./categorylist.html">
+                            <div class="category-card-img">
+                                <img src="../assets/images/home pg/c_formal_gray_shirt.png" class="w-100" alt="Women Fashion">
+                            </div>
+                            <div class="category-card-body">
+                                <h5>Formal</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="bg-body-tertiary text-center">
+    <div class="container p-4">
+        <section class="mb-4">
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-twitter"></i></a>
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-google"></i></a>
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-instagram"></i></a>
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><i
+                    class="fab fa-github"></i></a>
+        </section>
+        <section class="">
+            <form action="">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-auto">
+                        <p class="pt-2">
+                            <strong>Sign up for our newsletter</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-5 col-12">
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="email" id="form5Example24" class="form-control" />
+                            <label class="form-label" for="form5Example24">Email address</label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">POPULAR CATEGORIES</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a class="text-body" href="#!">Fashion</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">Electronics</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">Cosmetics</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">Health</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">PRODUCTS</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a class="text-body" href="#!">Prices Drop</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">New Products</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">Best Sales</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">OUR COMPANY</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a class="text-body" href="#!">Delivery</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">Legal Notice</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">Terms And Conditions</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">SERVICES</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a class="text-body" href="#!">Prices Drop</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">New Products</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">Best Sales</a>
+                        </li>
+                        <li>
+                            <a class="text-body" href="#!">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="/index.html">TRNDZZ</a>
+    </div>
+</footer>
+    <!-- custom js -->
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        #sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        #sidebar.active {
+            width: 80px;
+        }
+
+        #content {
+            width: calc(100% - 250px);
+            margin-left: 250px;
+            padding: 15px;
+            transition: all 0.3s;
+        }
+
+        #content.active {
+            width: calc(100% - 80px);
+            margin-left: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar"style="background-color:#F8F9FA;">
+            <div class="sidebar-heading">Seller Dashboard</div>
+            <div class="list-group list-group-flush">
+                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-dark text-white">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a><br>
+                <a href="./add.html" class="list-group-item list-group-item-action bg-dark text-white">
+                    <i class="fas fa-shopping-cart"></i>Add a Pdt
+                </a><br>
+                <a href="./ordmgt.html" class="list-group-item list-group-item-action bg-dark text-white">
+                    <i class="fas fa-box"></i> Order Mgt
+                </a><br>
+                <a href="./pdtmgt.html" class="list-group-item list-group-item-action bg-dark text-white">
+                    <i class="fas fa-plus"></i> Product mgt
+                </a><br>
+                <a href="../user/profile.html" class="list-group-item list-group-item-action bg-dark text-white">
+                    <i class="fas fa-user"></i> Account
+                </a>
+            </div>
+        </div>
+        <!-- /#sidebar -->
+
+        <!-- Page Content -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="btn btn-dark" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <form class="form-inline">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <img src="https://via.placeholder.com/30" alt="Profile Picture" class="rounded-circle ml-2">
+                            <span class="ml-2">Seller Name</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Left Section with Pie Chart and Top 5 Sellers -->
+            <div class="row">
+                <!-- Top 5 Sellers Section -->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Top 5 Products</h2>
+                            <ul class="seller-list">
+                                <li class="seller-list-item">
+                                    <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle"
+                                        alt="Seller 1">
+                                    <div>
+                                        <h5 class="mt-0 mb-1">Product 1</h5>
+                                         information about Product 1.
+                                    </div>
+                                </li>
+                                <li class="seller-list-item">
+                                    <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle"
+                                        alt="Seller 2">
+                                    <div>
+                                        <h5 class="mt-0 mb-1">Product 2</h5>
+                                       information about Product 2.
+                                    </div>
+                                </li>
+                                <li class="seller-list-item">
+                                    <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle"
+                                        alt="Seller 3">
+                                    <div>
+                                        <h5 class="mt-0 mb-1">Product 3</h5>
+                                        information about Product 3.
+                                    </div>
+                                </li>
+                                <li class="seller-list-item">
+                                    <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle"
+                                        alt="Seller 4">
+                                    <div>
+                                        <h5 class="mt-0 mb-1">Product 4</h5>
+                                        Additional information about Product 4.
+                                    </div>
+                                </li>
+                                <li class="seller-list-item">
+                                    <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle"
+                                        alt="Seller 5">
+                                    <div>
+                                        <h5 class="mt-0 mb-1">Product 5</h5>
+                                         information about Seller 5.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pie Chart Section -->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="myPieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section with Today's Status Card, Peak Hours Line Chart, and Top 5 Sellers -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Today's Status</h2>
+                            <div id="todayStatus" class="text-center">
+                                <div class="counter-container">
+                                    <h3 id="customerCounter" class="mb-4">0</h3>
+                                    <p>New Customers</p>
+                                </div>
+                                <div class="counter-container">
+                                    <h3 id="sellerCounter" class="mb-4">0</h3>
+                                    <p>New Orders</p>
+                                </div>
+                                <div class="counter-container">
+                                    <h3 id="productCounter" class="mb-4">0</h3>
+                                    <p>New Products</p>
+                                </div>
+                                <div class="counter-container">
+                                    <h3 id="incomeCounter" class="mb-4">$0</h3>
+                                    <p>Today's Income</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Section with Peak Hours Line Chart -->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Peak Hours</h2>
+                            <canvas id="peakHoursChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bootstrap JS and dependencies -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <!-- Custom Script -->
+            <script>
+                $(document).ready(function () {
+                    $("#sidebarToggle").click(function () {
+                        $("#sidebar, #content").toggleClass("active");
+                    });
+                });
+
+                // Sample data for the pie chart
+                var pieData = {
+                    labels: ['Label 1', 'Label 2', 'Label 3'],
+                    datasets: [{
+                        data: [30, 50, 20],
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+                    }]
+                };
+
+                // Get the context of the canvas element for the pie chart
+                var pieCtx = document.getElementById('myPieChart').getContext('2d');
+
+                // Create the pie chart
+                var myPieChart = new Chart(pieCtx, {
+                    type: 'pie',
+                    data: pieData
+                });
+
+                // Animation for the counters (new customers, new sellers, new products, today's income)
+                var customerCounterElement = document.getElementById('customerCounter');
+                var sellerCounterElement = document.getElementById('sellerCounter');
+                var productCounterElement = document.getElementById('productCounter');
+                var incomeCounterElement = document.getElementById('incomeCounter');
+
+                var customerCounterValue = 0;
+                var sellerCounterValue = 0;
+                var productCounterValue = 0;
+                var incomeCounterValue = 0;
+
+                function animateCounters() {
+                    var interval = setInterval(function () {
+                        customerCounterValue += 5;
+                        sellerCounterValue += 3;
+                        productCounterValue += 2;
+                        incomeCounterValue += 100;
+
+                        customerCounterElement.textContent = customerCounterValue;
+                        sellerCounterElement.textContent = sellerCounterValue;
+                        productCounterElement.textContent = productCounterValue;
+                        incomeCounterElement.textContent = incomeCounterValue;
+
+                        if (customerCounterValue >= 50 && sellerCounterValue >= 30 && productCounterValue >= 20 && incomeCounterValue >= 5000) {
+                            clearInterval(interval);
+                        }
+                    }, 200);
+                }
+
+                animateCounters();
+
+                // Sample data for the line chart (peak hours)
+                var peakHoursData = {
+                    labels: ['9 AM', '12 PM', '3 PM', '6 PM', '9 PM'],
+                    datasets: [{
+                        label: 'Activity Level',
+                        data: [10, 20, 15, 25, 30],
+                        borderColor: '#36A2EB',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderWidth: 2,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#36A2EB',
+                        pointBorderColor: '#fff',
+                        pointHoverRadius: 6,
+                        pointHoverBackgroundColor: '#36A2EB',
+                        pointHoverBorderColor: '#fff'
+                    }]
+                };
+
+                // Get the context of the canvas element for the line chart (peak hours)
+                var peakHoursCtx = document.getElementById('peakHoursChart').getContext('2d');
+
+                // Create the line chart (peak hours)
+                var peakHoursChart = new Chart(peakHoursCtx, {
+                    type: 'line',
+                    data: peakHoursData,
+                    options: {
+                        scales: {
+                            x: {
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+</body>
+
+</html>
